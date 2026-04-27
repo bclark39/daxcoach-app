@@ -179,5 +179,66 @@ li {
   .page-content {
     padding: 1.25rem;
   }
+
+   /* ---------------------------------------------------
+   SIDEBAR LAYOUT
+--------------------------------------------------- */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sidebar {
+  background-color: #161b22;
+  border-right: 1px solid #30363d;
+  padding: 1.5rem;
+  height: calc(100vh - 70px);
+  position: sticky;
+  top: 70px;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #58a6ff;
+}
+
+.sidebar-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.sidebar-link {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #21262d;
+  color: #58a6ff;
+}
+
+.sidebar-link.active {
+  background-color: #30363d;
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+/* Main content area */
+.main-content {
+  padding: 1rem;
+}
+
 }
 
