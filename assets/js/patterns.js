@@ -1,1 +1,2 @@
+fetch("data/patterns.json")
 
