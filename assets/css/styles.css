@@ -242,3 +242,31 @@ li {
 
 }
 
+/* ---------------------------------------------------
+   LAYOUT: SIDEBAR + MAIN CONTENT
+--------------------------------------------------- */
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Sidebar stays fixed width */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: #161b22;
+  border-right: 1px solid #30363d;
+  padding: 1.5rem 1rem;
+  height: calc(100vh - 70px); /* adjust for top nav */
+  overflow-y: auto;
+}
+
+/* Main content expands to the right */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
