@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contentArea = document.getElementById("pattern-content");
     const patternLinks = document.querySelectorAll("[data-pattern]");
 
-    // ⭐ THIS is where fetch goes
+    // Load JSON file
     fetch("data/patterns.json")
         .then(response => response.json())
         .then(data => {
@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             });
+        })
+        .catch(error => {
+            console.error("Error loading patterns.json:", error);
         });
 });
-
-
