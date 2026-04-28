@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar-content");
     const contentArea = document.getElementById("pattern-content");
 
+    // ⭐ THIS IS WHERE FETCH GOES
     fetch("data/patterns.json")
         .then(res => res.json())
         .then(data => {
@@ -55,5 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
 
