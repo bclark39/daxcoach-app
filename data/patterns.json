@@ -1,1 +1,33 @@
+{
+  "patterns": [
+    {
+      "id": "calculate-basics",
+      "title": "CALCULATE Basics",
+      "category": "Filter Context",
+      "description": "CALCULATE modifies filter context to evaluate an expression under new conditions.",
+      "example": "Total Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))"
+    },
+    {
+      "id": "yoy-sales",
+      "title": "Year-over-Year Sales",
+      "category": "Time Intelligence",
+      "description": "A common pattern for comparing performance across years.",
+      "example": "YoY Sales = [Total Sales] - [Total Sales LY]"
+    },
+    {
+      "id": "dynamic-measures",
+      "title": "Dynamic Measures",
+      "category": "Iterator Functions",
+      "description": "Allows users to switch between multiple measures using a slicer.",
+      "example": "Selected Measure = SWITCH(SELECTEDVALUE('Measure Selector'[Measure]), ...)"
+    },
+    {
+      "id": "rls-bridge",
+      "title": "RLS with Bridge Tables",
+      "category": "Row Context",
+      "description": "Implements row-level security using a bridge table for many-to-many relationships.",
+      "example": "Security Filter = RELATED(UserBridge[UserID])"
+    }
+  ]
+}
 
