@@ -7,7 +7,7 @@
         {
           "id": "calculate-basics",
           "title": "CALCULATE Basics",
-          "description": "Understanding how CALCULATE modifies filter context.",
+          "description": "Understanding how CALCULATE modifies filter context to produce different results depending on the filters applied.",
           "example": "Total Sales FC = CALCULATE([Total Sales], 'Date'[Year] = 2024)"
         }
       ]
@@ -19,7 +19,7 @@
         {
           "id": "yoy-sales",
           "title": "Year-over-Year Sales",
-          "description": "Compare sales across years using SAMEPERIODLASTYEAR.",
+          "description": "Compare sales across years using SAMEPERIODLASTYEAR to evaluate performance trends.",
           "example": "YoY Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))"
         }
       ]
@@ -31,7 +31,7 @@
         {
           "id": "dynamic-measures",
           "title": "Dynamic Measures",
-          "description": "Using iterators to build dynamic calculations.",
+          "description": "Using iterators like SUMX to build dynamic calculations that evaluate row-by-row.",
           "example": "Dynamic Total = SUMX(VALUES('Product'[Category]), [Total Sales])"
         }
       ]
@@ -43,10 +43,11 @@
         {
           "id": "rls-bridge",
           "title": "RLS with Bridge Tables",
-          "description": "Using row context to enforce row-level security.",
+          "description": "Using row context and LOOKUPVALUE to enforce row-level security through a bridge table.",
           "example": "RLS Filter = LOOKUPVALUE('Bridge'[UserID], 'Bridge'[Email], USERPRINCIPALNAME())"
         }
       ]
     }
   ]
 }
+
